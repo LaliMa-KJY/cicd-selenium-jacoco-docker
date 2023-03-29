@@ -26,7 +26,7 @@ jobs:
       - name: Unit Test
         run: ./gradlew test
       - name: Upload Jacoco Report
-        if: always()
+        if: always() #always()는 성공 여부 상관x failure()는 실패 시 무시?
         uses: actions/upload-artifact@v3
         with:
           name: jacoco-report
